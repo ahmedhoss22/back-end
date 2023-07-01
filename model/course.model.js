@@ -84,7 +84,6 @@ const courseSchema = new mongoose.Schema({
     enroll:[
         {
             type : mongoose.Schema.Types.ObjectId,
-            required : true,
             ref : "users"
         }
     ],

@@ -13,6 +13,15 @@ app.use(helmet());
 app.use(express.json())
 app.use(cookieParser());
 app.use('/course',courseRouter)
+const url=process.env.DB_URL
+
+
+
+app.use('/uploads/courses',express.static('uploads/courses'))
+
+
+
+
 
 app.all('*', (req,res) => {
     logger.error("This Route is not defined")
@@ -22,8 +31,6 @@ app.all('*', (req,res) => {
         });
 });
 
-app.use('/course',express.static('uploads'))
-const url=process.env.DB_URL
 
 
 mongoose.connect(url, {

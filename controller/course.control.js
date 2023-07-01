@@ -6,6 +6,11 @@ const createCourse = async (req,res) => {
     {
         const course = new CourseModel(req.body);
 
+        if(req.file)
+        {
+            course.image = req.file.path
+        }
+
         const result = await course.save();
 
         res.status(201).json({
