@@ -46,6 +46,9 @@ const showCourse = async (req,res)=>{
     {
         const {id} = req.params
         const course = await CourseModel.findById(id);
+        if(!course){
+            res.status(404).json({message:`can not find any course with ID : ${id}`})
+        }
         res.status(200).json({
             status : 200,
             data: course,
@@ -61,7 +64,56 @@ const showCourse = async (req,res)=>{
     
 }
 
-module.exports = {createCourse,showCourses,showCourse};
+const updateCourse = async (req,res)=>{
+    try
+    {
+        const {id} = req.params
+        const course = await CourseModel.findByIdAndUpdate(id,req.body,{
+            new:true,
+            runValidators:true
+        });
+        if(!course){
+            res.status(404).json({message:`can not find any course with ID : ${id}`})
+        }
+        res.status(200).json({
+            status : 200,
+            data: course,
+        });
+    }
+    catch(error)
+    {
+        res.status(400).json({
+            status : 400,
+            message : error.message
+        });        
+    }
+    
+}
+
+const deleteCourse = async (req,res)=>{
+    try
+    {
+        const {id} = req.params
+        const course = await CourseModel.findByIdAndDelete(id);
+        if(!course){
+            res.status(404).json({message:`can not find any course with ID : ${id}`})
+        }
+        res.status(200).json({
+            status : 200,
+            data: course,
+        });
+    }
+    catch(error)
+    {
+        res.status(400).json({
+            status : 400,
+            message : error.message
+        });        
+    }
+    
+}
+
+module.exports = {createCourse,showCourses,showCourse,updateCourse,deleteCourse};
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
