@@ -1,6 +1,5 @@
 const express=require('express')
 const app = express()
-const path = require('path')
 const cors=require('cors')
 const dotenv=require('dotenv')
 const helmet =require("helmet")
@@ -23,7 +22,7 @@ app.all('*', (req,res) => {
         });
 });
 
-// app.use('/course/img',express.static('./uploads/courses'))
+app.use('/course',express.static('uploads'))
 const url=process.env.DB_URL
 
 

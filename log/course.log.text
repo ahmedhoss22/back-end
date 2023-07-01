@@ -1,1 +1,8 @@
 {"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T10:53:12.338Z"}
+{"level":"error","message":"error is not defined","service":"user-service","timestamp":"2023-07-01T10:58:30.877Z"}
+{"level":"error","message":"can not find any course with ID : 649f9d22fd878fc7c8452b46","service":"user-service","timestamp":"2023-07-01T10:58:50.329Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"sssss\" (type string) at path \"_id\" for model \"courses\"","service":"user-service","timestamp":"2023-07-01T11:03:51.538Z"}
+{"level":"error","message":"can not find any course with ID : 649f9d22fd878fc7c8452b46","service":"user-service","timestamp":"2023-07-01T11:04:05.243Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"img\" (type string) at path \"_id\" for model \"courses\"","service":"user-service","timestamp":"2023-07-01T11:29:14.504Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T11:29:14.654Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"img\" (type string) at path \"_id\" for model \"courses\"","service":"user-service","timestamp":"2023-07-01T11:29:24.448Z"}
