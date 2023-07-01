@@ -96,7 +96,7 @@ const CourseModel = mongoose.model('courses',courseSchema);
 
 
 
-// module.exports = CourseModel;
+module.exports = CourseModel;
 
 
 
