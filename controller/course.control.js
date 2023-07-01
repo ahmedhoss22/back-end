@@ -1,6 +1,5 @@
 const CourseModel = require('../model/course.model');
 
-
 const createCourse = async (req,res) => {
     try
     {
