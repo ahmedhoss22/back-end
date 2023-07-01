@@ -88,8 +88,12 @@ const courseSchema = new mongoose.Schema({
             required : true,
             ref : "users"
         }
-],
-});
+    ]
+},
+{
+    timestamps: true
+}
+);
 
 const CourseModel = mongoose.model('courses',courseSchema);
 

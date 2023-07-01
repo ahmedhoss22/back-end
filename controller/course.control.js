@@ -41,7 +41,27 @@ const showCourses = async (req,res)=>{
     
 }
 
-module.exports = {createCourse,showCourses};
+const showCourse = async (req,res)=>{
+    try
+    {
+        const {id} = req.params
+        const course = await CourseModel.findById(id);
+        res.status(200).json({
+            status : 200,
+            data: course,
+        });
+    }
+    catch(error)
+    {
+        res.status(400).json({
+            status : 400,
+            message : error.message
+        });        
+    }
+    
+}
+
+module.exports = {createCourse,showCourses,showCourse};
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
