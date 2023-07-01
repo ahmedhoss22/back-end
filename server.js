@@ -5,6 +5,7 @@ const cors=require('cors')
 const dotenv=require('dotenv')
 const helmet =require("helmet")
 const mongoose=require('mongoose')
+const logger=require('./config/logger')
 const cookieParser=require("cookie-parser")
 const courseRouter=require('./routes/course.route')
 dotenv.config()
@@ -24,7 +25,7 @@ mongoose.connect(url, {
     console.log("Database connected !!!!");
 }).catch((err) => {
     console.log(err);
-    console.log("Database NOT CONNECTED");
+    logger.error("Database NOT CONNECTED");
 })
 
 

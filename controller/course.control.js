@@ -1,5 +1,6 @@
 const CourseModel = require('../model/course.model');
 
+const logger = require('../config/logger')
 const createCourse = async (req,res) => {
     try
     {
@@ -15,6 +16,7 @@ const createCourse = async (req,res) => {
     }
     catch(error)
     {
+        logger.error(error.message)
         res.status(400).json({
             status : 400,
             message : error.message
@@ -33,6 +35,7 @@ const showCourses = async (req,res)=>{
     }
     catch(error)
     {
+        logger.error(error.message)
         res.status(400).json({
             status : 400,
             message : error.message
@@ -50,6 +53,7 @@ const showCourse = async (req,res)=>{
         const course = await CourseModel.findById(id);
         if(!course){
             res.status(404).json({message:`can not find any course with ID : ${id}`})
+            logger.error(`can not find any course with ID : ${id}`)
         }
         res.status(200).json({
             status : 200,
@@ -58,6 +62,7 @@ const showCourse = async (req,res)=>{
     }
     catch(error)
     {
+        logger.error(error.message)
         res.status(400).json({
             status : 400,
             message : error.message
@@ -75,6 +80,7 @@ const updateCourse = async (req,res)=>{
             runValidators:true
         });
         if(!course){
+            logger.error(`can not find any course with ID : ${id}`)
             res.status(404).json({message:`can not find any course with ID : ${id}`})
         }
         res.status(200).json({
@@ -84,6 +90,7 @@ const updateCourse = async (req,res)=>{
     }
     catch(error)
     {
+        logger.error(error.message)
         res.status(400).json({
             status : 400,
             message : error.message
@@ -98,6 +105,7 @@ const deleteCourse = async (req,res)=>{
         const {id} = req.params
         const course = await CourseModel.findByIdAndDelete(id);
         if(!course){
+            logger.error(error.message)
             res.status(404).json({message:`can not find any course with ID : ${id}`})
         }
         res.status(200).json({
@@ -107,6 +115,7 @@ const deleteCourse = async (req,res)=>{
     }
     catch(error)
     {
+        logger.error(error.message)
         res.status(400).json({
             status : 400,
             message : error.message
