@@ -9,11 +9,5 @@ router.get('/', showCourses);
 router.get('/:id', showCourse);
 router.put('/:id', updateCourse);
 router.delete('/:id', deleteCourse);
-router.all('*', (req,res) => {
-    logger.error("This Route is not defined")
-        res.status(404).json({
-            status : 404,
-            message : error.message
-        });
-});
+
 module.exports = router;

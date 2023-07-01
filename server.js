@@ -14,6 +14,15 @@ app.use(helmet());
 app.use(express.json())
 app.use(cookieParser());
 app.use('/course',courseRouter)
+
+app.all('*', (req,res) => {
+    logger.error("This Route is not defined")
+        res.status(404).json({
+            status : 404,
+            message : "Page not Found"
+        });
+});
+
 // app.use('/course/img',express.static('./uploads/courses'))
 const url=process.env.DB_URL
 
