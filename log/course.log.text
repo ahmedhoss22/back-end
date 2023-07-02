@@ -37,3 +37,4 @@
 {"level":"error","message":"can not find any course with ID : 64a13ca54659b98a80d3d049","service":"user-service","timestamp":"2023-07-02T09:56:00.368Z"}
 {"level":"error","message":"ENOENT: no such file or directory, unlink 'uploads\\courses\\1688288421322.jpg'","service":"user-service","timestamp":"2023-07-02T10:09:27.943Z"}
 {"level":"error","message":"ENOENT: no such file or directory, unlink 'uploads\\courses\\1688291785181.jpg'","service":"user-service","timestamp":"2023-07-02T10:28:41.535Z"}
+{"level":"error","message":"courses validation failed: enroll.0: Cast to [ObjectId] failed for value \"`[ '[\"649f4e30a1a05cd482a6650c\"]' ]`\" (type string) at path \"enroll.0\" because of \"CastError\"","service":"user-service","timestamp":"2023-07-02T10:43:03.008Z"}
