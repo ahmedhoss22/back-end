@@ -1,0 +1,14 @@
+{"level":"error","message":"courses validation failed: enroll.0: Cast to [ObjectId] failed for value \"`[ '[\"649f4e30a1a05cd482a6650c\"]' ]`\" (type string) at path \"enroll.0\" because of \"CastError\"","service":"user-service","timestamp":"2023-07-01T20:10:05.406Z"}
+{"level":"error","message":"courses validation failed: enroll.0: Cast to [ObjectId] failed for value \"`[ '[\"649f4e30a1a05cd482a6650c\"]' ]`\" (type string) at path \"enroll.0\" because of \"CastError\"","service":"user-service","timestamp":"2023-07-01T20:10:44.130Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:13:09.643Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:13:09.861Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:13:39.341Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:13:39.987Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:13:42.022Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:13:53.735Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:15:25.206Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:15:30.381Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:16:45.957Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:16:54.791Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:17:24.599Z"}
+{"level":"error","message":"This Route is not defined","service":"user-service","timestamp":"2023-07-01T20:17:28.384Z"}
