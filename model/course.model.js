@@ -18,32 +18,32 @@ const courseSchema = new mongoose.Schema({
     },
     instructor:{
         type : String,
-        required : true,
+        // required : true,
         trim : true
     },
     level:{
         type : Number,
-        required : true,
+        // required : true,
         trim : true
     },
     numLessons:{
         type : Number,
-        required : true,
+        // required : true,
         trim : true
     },
     language:{
         type : String,
-        required : true,
+        // required : true,
         trim : true
     },
     startDate:{
         type : String,
-        required : true,
+        // required : true,
         trim : true
     },
     duration:{
         type : Number,
-        required : true,
+        // required : true,
         trim : true
     },
     certificate:{
@@ -52,32 +52,32 @@ const courseSchema = new mongoose.Schema({
     },
     intro:{
         type : String,
-        required : true,
+        // required : true,
         trim : true
     },
     assessment:{
         type : String,
-        required : true,
+        // required : true,
         trim : true
     },
     requirements:{
         type : String,
-        required : true,
+        // required : true,
         trim : true
     },
     materials:{
         type : String,
-        required : true,
+        // required : true,
         trim : true
     },
     publishDate:{
         type : String,
-        required : true,
+        // required : true,
         trim : true,
     },
     image:{
         type : String,
-        required : true,
+        // required : true,
         trim : true,
         default:'uploads/courses/default.png'
     },

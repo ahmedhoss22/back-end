@@ -1,43 +1,28 @@
-<<<<<<< HEAD
 const validator = require('validator');
 
-const employeeValidation = (name,email, password,nationalId, phone) => {
-
+const courseValidation = (name,instructor, level,numLessons, language,startDate,duration,certificate,intro,assessment,requirements,materials,publishDate,enroll) => {
   const errors = {};
 
   if (validator.isEmpty(name)) errors.name = 'Name is required';
-  if (validator.isEmpty(password)) errors.password = 'Password is required';
-  if (!validator.isLength(password, { min: 8 }))errors.password = 'Password must be at least 8 characters long';
-  if (validator.isEmpty(phone)) errors.phone = 'Phone number is required';
-  if (validator.isEmpty(nationalId)) errors.nationalId = 'National id is required';
-  if (!validator.isMobilePhone(phone)) errors.phone = 'Phone number is invalid';
-  if (validator.isEmpty(email)) errors.email ="Email address is required"
- // if (validator.isEmail(email)) errors.email ="Email address is invalid"
+  if (validator.isEmpty(instructor)) errors.instructor = 'instructor is required';
+  if (validator.isInt(level)) errors.level = 'level must be number';
+  if (validator.isEmpty(level)) errors.level = 'level is required';
+  if (validator.isEmpty(numLessons)) errors.numLessons = 'numLessons id is required';
+  if (validator.isInt(numLessons)) errors.numLessons = 'numLessons must be number';
+  if (validator.isEmpty(language)) errors.language ="language is required"
+  if (validator.isEmpty(startDate)) errors.startDate ="startDate is required"
+  if (validator.isEmpty(duration)) errors.duration ="duration is required"
+  if (validator.isInt(duration)) errors.duration ="duration must be number"
+  if (validator.isBoolean(certificate)) errors.certificate ="certificate must be True Or False"
+  if (validator.isEmpty(certificate)) errors.certificate ="certificate is required"
+  if (validator.isEmpty(intro)) errors.intro ="intro is required"
+  if (validator.isEmpty(assessment)) errors.assessment ="assessment is required"
+  if (validator.isEmpty(requirements)) errors.requirements ="requirements is required"
+  if (validator.isEmpty(materials)) errors.materials ="materials is required"
+  if (validator.isEmpty(publishDate)) errors.publishDate ="publishDate is required"
+  if (validator.isEmpty(enroll)) errors.enroll ="enroll is required"
 
   return {errors,isValid: Object.keys(errors).length === 0};
 };
 
-module.exports = employeeValidation;
-=======
-// const validator = require('validator');
-
-// const employeeValidation = (name,email, password,nationalId, phone) => {
-
-//   const errors = {};
-
-//   if (validator.isEmpty(name)) errors.name = 'Name is required';
-//   if (validator.isEmpty(password)) errors.password = 'Password is required';
-//   if (!validator.isLength(password, { min: 8 }))errors.password = 'Password must be at least 8 characters long';
-//   if (validator.isEmpty(phone)) errors.phone = 'Phone number is required';
-//   if (validator.isEmpty(nationalId)) errors.nationalId = 'National id is required';
-//   if (!validator.isMobilePhone(phone)) errors.phone = 'Phone number is invalid';
-//   if (validator.isEmpty(email)) errors.email ="Email address is required"
-//  // if (validator.isEmail(email)) errors.email ="Email address is invalid"
-
-//   return {errors,isValid: Object.keys(errors).length === 0};
-// };
-
-// module.exports = employeeValidation;
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
->>>>>>> 262890db789a97e1b5ba1ea5856d4b056d3d0faa
+module.exports = courseValidation;
