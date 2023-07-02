@@ -1,6 +1,6 @@
 const fs = require("fs")
 const CourseModel = require('../model/course.model');
-const courseValidation = require('../validation/course.validate')
+const courseValidte = require('../validation/course.validate')
 
 const getLogger = require('../services/logger')
 const logger=getLogger("course")
@@ -12,6 +12,10 @@ const createCourse = async (req,res) => {
         if(req.file)
         {
             course.image = req.file.path
+        }
+        const {error} = courseValidte(req.body)
+        if(error){
+            return res.status(400).json({error:error.details[0].message})
         }
         const result = await course.save();
         res.status(201).json({
@@ -89,8 +93,10 @@ const updateCourse = async (req,res)=>{
         }
         if(req.file)
         {
-            fs.unlinkSync(`${course.image}`)
-            course.image = req.file.path
+            if(course.image != "uploads/courses/default.png")
+            {
+                fs.unlinkSync(`${course.image}`)
+            }
         }
         res.status(200).json({
             status : 200,
@@ -110,13 +116,16 @@ const updateCourse = async (req,res)=>{
 const deleteCourse = async (req,res)=>{
     try
     {
-        const {id} = req.params
-        const course = await CourseModel.findByIdAndDelete(id);
+        const _id = req.params.id
+        const course = await CourseModel.findByIdAndDelete(_id);
         if(!course){
             logger.error(error.message)
             res.status(404).json({message:`can not find any course with ID : ${id}`})
         }
-        fs.unlinkSync(`${course.image}`)
+        if(course.image != "uploads/courses/default.png")
+        {
+            fs.unlinkSync(`${course.image}`)
+        }
         res.status(200).json({
             status : 200,
             data: course,
