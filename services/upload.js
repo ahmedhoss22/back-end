@@ -1,6 +1,8 @@
 const multer = require('multer');
 const path = require('path');
 
+const getlogger = require("../services/logger")
+const logger=getlogger("courses")
 
 
 var storage = multer.diskStorage({
@@ -22,7 +24,7 @@ var upload = multer({
         }
         else
         {
-            console.log('only jpg & png file supported!')
+            logger.error("Not supported file type")
             callback(null,false);
         }
     },

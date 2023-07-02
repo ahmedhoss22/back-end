@@ -1,21 +1,19 @@
 const fs = require("fs")
 const CourseModel = require('../model/course.model');
 const courseValidation = require('../validation/course.validate')
-const logger = require('../config/logger')
 
+const getLogger = require('../services/logger')
+const logger=getLogger("course")
 
 const createCourse = async (req,res) => {
     try
     {
         const course = new CourseModel(req.body);
-
         if(req.file)
         {
             course.image = req.file.path
         }
-
         const result = await course.save();
-
         res.status(201).json({
             status : 201,
             message : 'Course created successfully',
@@ -74,7 +72,6 @@ const showCourse = async (req,res)=>{
             message : error.message
         });        
     }
-    
 }
 
 const updateCourse = async (req,res)=>{
@@ -108,7 +105,6 @@ const updateCourse = async (req,res)=>{
             message : error.message
         });        
     }
-    
 }
 
 const deleteCourse = async (req,res)=>{

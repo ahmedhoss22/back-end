@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {createCourse , showCourses , showCourse , updateCourse , deleteCourse} = require('../controller/course.control');
 
-const upload = require('../middleware/upload')
+const upload = require('../services/upload')
 
 router.post('/create',upload.single('image') ,createCourse);
 router.get('/', showCourses);

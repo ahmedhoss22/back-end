@@ -6,8 +6,6 @@ const userSchema = new mongoose.Schema({
         trim : true
     },
     });
-
-
 const UserModel = mongoose.model('users',userSchema);
 
 const courseSchema = new mongoose.Schema({
@@ -22,11 +20,6 @@ const courseSchema = new mongoose.Schema({
         trim : true
     },
     level:{
-        type : Number,
-        required : true,
-        trim : true
-    },
-    numLessons:{
         type : Number,
         required : true,
         trim : true
@@ -77,7 +70,6 @@ const courseSchema = new mongoose.Schema({
     },
     image:{
         type : String,
-        required : true,
         trim : true,
         default:'uploads/courses/default.png'
     },
@@ -90,8 +82,6 @@ const courseSchema = new mongoose.Schema({
 });
 
 const CourseModel = mongoose.model('courses',courseSchema);
-
-
 
 module.exports = CourseModel;
 

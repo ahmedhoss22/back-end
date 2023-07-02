@@ -4,7 +4,8 @@ const cors=require('cors')
 const dotenv=require('dotenv')
 const helmet =require("helmet")
 const mongoose=require('mongoose')
-const logger=require('./config/logger')
+const getlogger=require('./services/logger')
+const logger=getlogger("server")
 const cookieParser=require("cookie-parser")
 const courseRouter=require('./routes/course.route')
 dotenv.config()
@@ -12,16 +13,11 @@ app.use(cors());
 app.use(helmet());
 app.use(express.json())
 app.use(cookieParser());
-app.use('/course',courseRouter)
 const url=process.env.DB_URL
 
 
-
 app.use('/uploads/courses',express.static('uploads/courses'))
-
-
-
-
+app.use('/api/course',courseRouter)
 
 app.all('*', (req,res) => {
     logger.error("This Route is not defined")
@@ -30,8 +26,6 @@ app.all('*', (req,res) => {
             message : "Page not Found"
         });
 });
-
-
 
 mongoose.connect(url, {
     useNewUrlParser: true,
@@ -44,5 +38,5 @@ mongoose.connect(url, {
 })
 
 
-const PORT=process.env.PORT || 3000
+const PORT=process.env.PORT || 5000
 app.listen(PORT , ()=>{console.log(`App is running on port ${PORT}`);})

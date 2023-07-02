@@ -1,0 +1,54 @@
+2023-07-02 12:27:43 | ERROR | {"name":"ahmed"}
+2023-07-02 12:28:08 | ERROR | {"name":"ahmed"}
+2023-07-02 12:28:19 | ERROR | {"name":"ahmed"}
+2023-07-02 12:28:39 | ERROR | 8
+2023-07-02 12:28:44 | ERROR | sadas
+2023-07-02 12:28:55 | ERROR | {"age":""}
+2023-07-02 12:28:57 | ERROR | {"age":"5"}
+2023-07-02 12:29:38 | INFO | {"age":"5"}
+2023-07-02 12:29:46 | WARN | {"age":"5"}
+2023-07-02 12:34:24 | WARN | {"age":"5"}
+2023-07-02 12:35:59 | WARN | {"age":"5"}
+2023-07-02 12:37:09 | WARN | {"age":"5"}
+2023-07-02 12:37:14 | WARN | {"age":"5"}
+2023-07-02 12:38:03 | WARN | {"age":"5"}
+2023-07-02 12:38:05 | WARN | {"age":"5"}
+2023-07-02 12:38:07 | WARN | {"age":"5"}
+2023-07-02 12:38:13 | WARN | {"age":"5"}
+2023-07-02 12:38:23 | WARN | {"age":"5"}
+2023-07-02 12:38:25 | WARN | {"age":"5"}
+2023-07-02 12:40:41 | WARN | {"age":"5"}
+2023-07-02 12:40:46 | WARN | {"age":"5"}
+2023-07-02 12:40:58 | WARN | {"age":"5"}
+2023-07-02 12:41:00 | WARN | {"age":"5"}
+2023-07-02 12:41:25 | WARN | {"age":"5"}
+2023-07-02 12:42:54 | WARN | {"age":"5"}
+2023-07-02 12:43:32 | WARN | {"age":"5"}
+2023-07-02 12:43:34 | WARN | {"age":"5"}
+2023-07-02 12:43:36 | WARN | {"age":"5"}
+2023-07-02 12:43:45 | WARN | {"age":"5"}
+2023-07-02 12:43:49 | WARN | {"age":"5"}
+2023-07-02 12:43:58 | WARN | {"age":"5"}
+2023-07-02 12:44:40 | WARN | {"age":"5"}
+2023-07-02 12:44:46 | WARN | {"age":"5"}
+2023-07-02 12:44:54 | WARN | {"age":"5"}
+2023-07-02 12:44:56 | WARN | {"age":"5"}
+2023-07-02 12:44:56 | ERROR | 
+2023-07-02 12:45:04 | WARN | {"age":"5"}
+2023-07-02 12:45:04 | ERROR | Not supported file
+2023-07-02 12:45:07 | WARN | {"age":"5"}
+2023-07-02 12:45:07 | ERROR | Not supported file type
+2023-07-02 12:47:02 | WARN | {"age":"5"}
+2023-07-02 12:47:02 | ERROR | Not supported file type
+2023-07-02 12:47:24 | WARN | {"age":"5"}
+2023-07-02 12:47:24 | ERROR | Not supported file type
+2023-07-02 12:47:32 | WARN | {"age":"5"}
+2023-07-02 12:47:32 | ERROR | Not supported file type
+2023-07-02 12:47:33 | WARN | {"age":"5"}
+2023-07-02 12:47:33 | ERROR | Not supported file type
+2023-07-02 12:47:39 | WARN | {"age":"5"}
+2023-07-02 12:47:45 | WARN | {"age":"5"}
+2023-07-02 13:00:05 | ERROR | This Route is not defined
+2023-07-02 13:01:47 | ERROR | Cast to ObjectId failed for value "create" (type string) at path "_id" for model "courses"
+2023-07-02 13:02:35 | ERROR | courses validation failed: publishDate: Path `publishDate` is required., materials: Path `materials` is required., requirements: Path `requirements` is required., assessment: Path `assessment` is required., intro: Path `intro` is required., duration: Path `duration` is required., startDate: Path `startDate` is required., language: Path `language` is required., level: Path `level` is required., instructor: Path `instructor` is required., name: Path `name` is required.
+2023-07-02 16:06:36 | ERROR | courses validation failed: publishDate: Path `publishDate` is required., materials: Path `materials` is required., requirements: Path `requirements` is required., assessment: Path `assessment` is required., intro: Path `intro` is required., duration: Path `duration` is required., startDate: Path `startDate` is required., language: Path `language` is required., level: Path `level` is required., instructor: Path `instructor` is required., name: Path `name` is required.
