@@ -52,3 +52,14 @@
 2023-07-02 13:01:47 | ERROR | Cast to ObjectId failed for value "create" (type string) at path "_id" for model "courses"
 2023-07-02 13:02:35 | ERROR | courses validation failed: publishDate: Path `publishDate` is required., materials: Path `materials` is required., requirements: Path `requirements` is required., assessment: Path `assessment` is required., intro: Path `intro` is required., duration: Path `duration` is required., startDate: Path `startDate` is required., language: Path `language` is required., level: Path `level` is required., instructor: Path `instructor` is required., name: Path `name` is required.
 2023-07-02 16:06:36 | ERROR | courses validation failed: publishDate: Path `publishDate` is required., materials: Path `materials` is required., requirements: Path `requirements` is required., assessment: Path `assessment` is required., intro: Path `intro` is required., duration: Path `duration` is required., startDate: Path `startDate` is required., language: Path `language` is required., level: Path `level` is required., instructor: Path `instructor` is required., name: Path `name` is required.
+2023-07-03 22:27:33 | INFO | 
+2023-07-03 22:28:02 | INFO | Test on logger
+2023-07-03 22:28:11 | INFO | Test on logger
+2023-07-03 22:28:13 | INFO | Test on logger
+2023-07-03 22:28:16 | INFO | Test on logger
+2023-07-03 22:28:18 | INFO | Test on logger
+2023-07-03 22:28:37 | ERROR | Test on logger
+2023-07-03 22:28:53 | WARN | Test on logger
+2023-07-03 22:33:00 | INFO | Ts
+2023-07-03 22:33:02 | INFO | Tes
+2023-07-03 22:33:06 | INFO | Test on server file

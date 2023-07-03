@@ -1,4 +1,7 @@
 const jobSchema = require("../model/jobs.model");
+const loggerEvent= require("../services/logger")
+const logger= loggerEvent("job");
+
 
 const createJob = (req, res) => {
   const {
@@ -55,6 +58,7 @@ const getJobs = (req, res) => {
     })
     .catch((error) => {
       res.status(500).send(error);
+      logger.error(error.message)
     });
 };
 

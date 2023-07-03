@@ -4,11 +4,14 @@ const app=express();
 const mongoose=require('mongoose')
 const cors= require("cors")
 const helmet= require("helmet")
-
 const userRoutes =require("./routes/user.route")
 const authRoutes =require("./routes/auth.route")
 const jobRoutes=require('./routes/job.route')
 const cousreRoutes=require('./routes/course.route')
+
+const loggerEvent= require("./services/logger")
+const logger= loggerEvent("server")
+logger.info("Test on server file")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
