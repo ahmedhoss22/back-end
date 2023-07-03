@@ -5,10 +5,10 @@ const {createCourse , showCourses , showCourse , updateCourse , deleteCourse} = 
 
 const upload = require('../services/upload')
 
-router.post('/create',upload.single('image') ,createCourse);
-router.get('/', showCourses);
-router.get('/:id', showCourse);
-router.put('/:id', updateCourse);
-router.delete('/:id', deleteCourse);
+router.post('/course/create',upload.single('image') ,createCourse);
+router.get('/course/', showCourses);
+router.get('/course/:id', showCourse);
+router.put('/course/:id', updateCourse);
+router.delete('/course/:id', deleteCourse);
 
 module.exports = router;
