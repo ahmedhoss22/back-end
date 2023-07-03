@@ -6,30 +6,14 @@ const dbconn=require('./config/dbConn')
 const mongoose=require('mongoose')
 const router=require('./routes/root')
 const multer=require('multer')
-//////////////////////////////////////////////////////////////////////////////
+
 dbconn()
 app.use(express.json());
 app.use('/',require('./routes/root'))
 app.use(router);
-///////////////////////////////////////////////////////////////////////////////////
-
-// const Storage=multer.diskStorage({
-//     destination:'./upload',
-//     filename:(req,file,cb)=>{
-//         cb(null,file.originalname)
-//     }
-// })
-
-
-
-//////////////////////////////////////////////////////////////////////////////
-
 mongoose.connection.once("open", () => {
     console.log("connected to db successfully");
     app.listen(port,()=>{console.log(`server running on port ${port}`)})
 });
-
-//////////////////////////////////////////////////////////////////////////////
-
-
-// call every function here and make app.use for them
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
