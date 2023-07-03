@@ -1,6 +1,6 @@
 const User = require("../model/user.model");
 const bcrypt = require("bcryptjs");
-const generateUniqueUserId = require("../service/uniqueId");
+const generateUniqueUserId = require("../services/uniqueId");
 const validation = require("../validation/user.validation")
 exports.registerUser = async (req, res) => {
     try {

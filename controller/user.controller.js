@@ -1,10 +1,10 @@
 const User = require("../model/user.model");
 const validation = require("../validation/user.validation");
-const { sendUserIdEmail } = require("../service/nodemailer.service");
-const { cloudinaryUploadImage, cloudinaryRemoveImage } = require("../service/cloudinary.service");
+const { sendUserIdEmail } = require("../services/nodemailer.service");
+const { cloudinaryUploadImage, cloudinaryRemoveImage } = require("../services/cloudinary.service");
 const fs = require("fs")
 const path = require("path");
-const generateUniqueUserId = require("../service/uniqueId");
+const generateUniqueUserId = require("../services/uniqueId");
 
 exports.activateUserAccount = async (req, res) => {
     try {
